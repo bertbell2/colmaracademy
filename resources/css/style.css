@@ -1,3 +1,152 @@
 html {
   font-size: 16px;
 }
+
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+header {
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  background-color: white;
+  color: black;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.logo img {
+  height: 2rem;
+  margin-left: 1.5rem;
+  margin-right: 0.25rem;
+}
+
+nav .menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu ul {
+  margin-right: 1rem;
+}
+
+ul li {
+  display:inline;
+  padding: 0 1rem;
+}
+
+.image-menu {
+  display: none;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  background-color: lightgray;
+  height: 100%;
+}
+
+.banner img {
+  padding: 2rem 2.5rem 2rem 1.5rem;
+  width: 60%;
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: darkslategray;
+  padding-right: 1.5rem;
+  height: 15rem;
+}
+
+.banner-text h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.banner-text p {
+  font-size: 1.5rem;
+  font-weight:bold;
+}
+
+.banner-text .button {
+  width: 100%;
+  background-color: darkslategray;
+  color: white;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+.info-items {
+  display:flex;
+  justify-content: space-between;
+}
+
+.main-info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-info-item img {
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  width: 60%;
+}
+
+.main-info-item h2 {
+  margin-bottom: 2rem;
+  padding: 0 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.main-info-item p {
+  padding: 0 1.5rem;
+}
+
+.other-info-items {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+
+.info-item:last-child {
+  background-color: lightgray;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  width: 423px;
+  border: 1px solid lightgray;
+}
+
+.info-item img {
+  display: block;
+  padding: 1rem;
+  width: 35%;
+  height: auto;
+  max-height: 148px;
+}
+
+.info-item-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.info-item-desc h3 {
+  margin-bottom: 0.5rem ;
+}
+
+.info-item-desc .info-item-desc-text {
+  margin-bottom: 0.5rem;
+}
