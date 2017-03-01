@@ -47,7 +47,7 @@ ul li {
 .banner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content:flex-start;
   background-color: lightgray;
 }
 
@@ -63,24 +63,28 @@ ul li {
 }
 
 .banner-text {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   justify-content: space-around;
   color: darkslategray;
-  /*padding-right: 1.5rem;*/
+  margin-right: 1rem;
   height: 15rem;
+  /* This is ugly but I can't size button based on the wrap text width */
+  max-width: 21rem;
 }
 
 .banner-text h1 {
   font-size: 2.5rem;
   font-weight: bold;
-  padding-right: 1.5rem;
+  display: inline-block;
+  width: auto;
 }
 
 .banner-text p {
   font-size: 1.5rem;
   font-weight:bold;
-  padding-right: 1.5rem;
+  display: inline-block;
+  width: auto;
 }
 
 .banner-text .button {
@@ -90,7 +94,6 @@ ul li {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   text-align: center;
-  padding-right: 1.5rem;
 }
 
 .info-items {
@@ -240,6 +243,11 @@ ul li {
   margin-right: 1rem;
 }
 
+.exhibit-main video {
+  width: 100%;
+  height: auto;
+}
+
 .exhibit-others {
   display: flex;
   flex-direction: column;
@@ -251,6 +259,10 @@ ul li {
   justify-content:flex-start;
   width: 423px;
   height: 168px;
+}
+
+.exhibit-item:first-child {
+  background-color: lightgray;
 }
 
 .exhibit-item img {
@@ -266,4 +278,21 @@ ul li {
   flex-direction: column;
   justify-content:space-around;
   flex-grow: 1;
+}
+
+footer {
+  display: flex;
+  border-top: 1px solid lightgray;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+footer .left {
+  flex-grow: 1;
+  margin-left: 1.5rem;
+}
+
+footer .right {
+  text-align: right;
+  margin-right: 1.5rem;
 }
