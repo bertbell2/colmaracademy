@@ -6,6 +6,8 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
+/* Header and Menu*/
+
 header {
   display: flex;
   height: 4rem;
@@ -26,7 +28,7 @@ header {
   margin-right: 0.25rem;
 }
 
-nav .menu {
+.menu {
   display: flex;
   align-items: center;
 }
@@ -43,6 +45,27 @@ ul li {
 .image-menu {
   display: none;
 }
+
+@media only screen and (max-width: 470px) {
+  .logo {
+    display: none ;
+  }
+  .text-menu {
+    display: none;
+  }
+  .menu {
+    width: 100%;
+    margin: auto 2rem;
+  }
+  .image-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+/* Banner */
 
 .banner {
   display: flex;
@@ -96,6 +119,41 @@ ul li {
   text-align: center;
 }
 
+@media only screen and (max-width: 470px) {
+  .banner {
+    flex-direction: column;
+    background-color: darkgray;
+
+  }
+
+  .banner img {
+    display: none;
+  }
+
+  .banner-text-container {
+    margin: 11.25rem 0 0 0;
+    background-color: lightgray;
+    width: 100%;
+  }
+
+  .banner-text {
+    height: auto;
+    max-width: auto;
+    padding: 2rem 1rem 2rem 1rem;
+  }
+
+  .banner-text h1 {
+    margin-bottom: 2rem;
+  }
+
+  .banner-text p {
+    margin-bottom: 1.5rem;
+  }
+
+}
+
+/* Information Section */
+
 .info-items {
   display:flex;
   justify-content: space-between;
@@ -142,12 +200,16 @@ ul li {
   border: 1px solid lightgray;
 }
 
-.info-item img {
+.std-image {
   display: block;
   padding: 1rem;
   width: 35%;
   height: auto;
   max-height: 148px;
+}
+
+.mobile-image {
+  display:none;
 }
 
 .info-item-desc {
@@ -158,12 +220,49 @@ ul li {
 }
 
 .info-item-desc h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
   margin-bottom: 0.5rem ;
 }
 
 .info-item-desc .info-item-desc-text {
   margin-bottom: 0.5rem;
 }
+
+@media only screen and (max-width: 470px) {
+  .main-info-item {
+    display: none;
+  }
+
+  .info-item {
+    flex-direction: column;
+    border: none ;
+  }
+
+  .info-item-desc {
+    margin-left: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .mobile-image {
+    display: block;
+    padding: 1rem 1rem;
+    width: 100%;
+    height: auto;
+    max-width: 470px;
+    }
+
+  .std-image {
+    display:none;
+  }
+
+  .info-item:last-child {
+    background-color: white;
+  }
+
+}
+
+/* PRograms / Courses Section*/
 
 .programs {
   display: flex;
@@ -225,6 +324,61 @@ ul li {
   margin-left: 1rem;
 }
 
+@media only screen and (max-width: 470px) {
+  .programs {
+    background-color: whitesmoke ;
+  }
+
+  .program-grid {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  .program-row {
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: whitesmoke;
+    margin-bottom: auto;
+    width: 100%;
+  }
+
+  .program-row .program:nth-child(2n+0) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .program {
+    height: auto ;
+    border: none;
+    width: 100%;
+    background-color: inherit;
+    flex-basis: auto;
+  }
+
+  .program h3 {
+    margin-top: auto;
+    margin-left: auto;
+    margin-bottom: 0.5rem;
+    background-color:lightgray;
+    padding: 1rem 0 1rem 1rem ;
+    width: 100%;
+  }
+
+  .program img {
+    display:none ;
+  }
+
+  .program h4 {
+    display: none;
+  }
+
+  .program p {
+    display: none;
+  }
+}
+
+/* Exhibits Section*/
+
 .exhibits  {
   display: flex;
   flex-direction: column;
@@ -246,6 +400,11 @@ ul li {
 .exhibit-main video {
   width: 100%;
   height: auto;
+}
+
+.exhibit-main h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .exhibit-others {
@@ -280,6 +439,26 @@ ul li {
   flex-grow: 1;
 }
 
+@media only screen and (max-width: 470px) {
+  exhibits-all {
+    margin-bottom: 1rem;
+  }
+
+  .exhibit-main h3 {
+    display: none;
+  }
+
+  .exhibit-main p {
+    display: none;
+  }
+
+  .exhibit-others {
+    display: none;
+  }
+}
+
+/* Footer */
+
 footer {
   display: flex;
   border-top: 1px solid lightgray;
@@ -295,4 +474,13 @@ footer .left {
 footer .right {
   text-align: right;
   margin-right: 1.5rem;
+}
+
+@media only screen and (max-width: 470px) {
+  footer {
+    padding-bottom: 1rem;
+  }
+  footer .right {
+    display: none;
+  }
 }
