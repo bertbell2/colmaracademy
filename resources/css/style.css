@@ -234,6 +234,11 @@ ul li {
     display: none;
   }
 
+  .other-info-items {
+    padding-top: 0;
+    padding-bottom: 1rem;
+  }
+
   .info-item {
     flex-direction: column;
     border: none ;
@@ -249,7 +254,7 @@ ul li {
     padding: 1rem 1rem;
     width: 100%;
     height: auto;
-    max-width: 470px;
+    max-width: 460px;
     }
 
   .std-image {
@@ -332,37 +337,34 @@ ul li {
   .program-grid {
     margin-bottom: 2rem;
     width: 100%;
+    max-width: 460px;
+    align-items: center;
   }
 
   .program-row {
     flex-direction: column;
     justify-content: flex-start;
     background-color: whitesmoke;
-    margin-bottom: auto;
+    margin-bottom: 0;
     width: 100%;
   }
 
   .program-row .program:nth-child(2n+0) {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .program {
+    display: block;
     height: auto ;
     border: none;
-    width: 100%;
+    width: auto;
     background-color: inherit;
     flex-basis: auto;
-  }
-
-  .program h3 {
-    margin-top: auto;
-    margin-left: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
     margin-bottom: 0.5rem;
-    background-color:lightgray;
-    padding: 1rem 0 1rem 1rem ;
-    width: 100%;
-  }
+}
 
   .program img {
     display:none ;
@@ -375,6 +377,19 @@ ul li {
   .program p {
     display: none;
   }
+
+  .program h3 {
+    margin-top: 0;
+    margin-left: 0;
+    background-color:lightgray;
+    padding-top: 1rem ;
+    padding-left: 1rem ;
+    padding-bottom: 1rem ;
+    padding-right: auto;
+    width: auto;
+    max-width: 460px;
+  }
+
 }
 
 /* Exhibits Section*/
