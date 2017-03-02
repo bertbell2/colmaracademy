@@ -140,6 +140,7 @@ ul li {
     height: auto;
     max-width: auto;
     padding: 2rem 1rem 2rem 1rem;
+    color: #404040;
   }
 
   .banner-text h1 {
@@ -148,8 +149,12 @@ ul li {
 
   .banner-text p {
     margin-bottom: 1.5rem;
+    color: #808080;
   }
 
+  .banner-text .button {
+    background-color: #808080;
+  }
 }
 
 /* Information Section */
@@ -157,13 +162,14 @@ ul li {
 .info-items {
   display:flex;
   justify-content: space-between;
+  padding-bottom: 2rem;
 }
 
 .main-info-item {
   display: flex;
   flex-direction: column;
   width: 60%;
-  margin: 2rem 1.5rem 2rem 1.5rem;
+  margin: 2rem 1.5rem 0 1.5rem;
 }
 
 .main-info-item img {
@@ -230,6 +236,10 @@ ul li {
 }
 
 @media only screen and (max-width: 470px) {
+  .info-items {
+    padding-bottom: 0;
+  }
+
   .main-info-item {
     display: none;
   }
@@ -402,7 +412,7 @@ ul li {
 
 .exhibits-all {
   display: flex;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .exhibit-main {
@@ -420,6 +430,7 @@ ul li {
 .exhibit-main h3 {
   font-weight: bold;
   font-size: 1.5rem;
+  padding-top: 2rem;
 }
 
 .exhibit-others {
@@ -447,6 +458,11 @@ ul li {
   max-height: 148px;
 }
 
+.exhibit-item h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
 .exhibit-desc {
   display: flex;
   flex-direction: column;
@@ -456,7 +472,7 @@ ul li {
 
 @media only screen and (max-width: 470px) {
   exhibits-all {
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
   }
 
   .exhibit-main h3 {
