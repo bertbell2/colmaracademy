@@ -10,6 +10,10 @@ body {
 h2, h3 {
   color: navy;
 }
+
+p {
+  line-height: 1.25;
+}
 /* Header and Menu*/
 
 header {
@@ -216,7 +220,7 @@ ul li a:hover {
 }
 
 .main-info-item p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .signature {
@@ -231,6 +235,7 @@ ul li a:hover {
   flex-grow: 100;
 }
 
+/* RFB:TODO convert to :hover?*/
 .info-item-container:last-child {
   background-color: lightskyblue;
 }
@@ -362,7 +367,7 @@ ul li a:hover {
 .program {
   display: flex;
   flex-direction: column;
-  height: 17.25rem;
+  height: 19rem;
   border: 1px solid black;
   /*flex-grow: 1;*/
   flex-basis: 30%;
@@ -375,6 +380,7 @@ ul li a:hover {
 
 .program h3 {
   font-weight: bold;
+  font-size: 1.5rem;
   margin-top: 1rem;
   margin-left: 1rem;
 }
@@ -382,10 +388,13 @@ ul li a:hover {
 .program h4 {
   margin: 0.5rem auto;
   margin-left: 1rem;
+  line-height: 1.5rem;
 }
 
 .program p {
   margin-left: 1rem;
+  margin-right: 0.5rem;
+  line-height: 1.5;
 }
 
 @media only screen and (max-width: 470px) {
@@ -485,12 +494,13 @@ ul li a:hover {
 }
 
 .exhibit-main p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .exhibit-others {
   display: flex;
   flex-direction: column;
+  margin-right: 0.5rem;
 }
 
 .exhibit-item {
@@ -501,6 +511,7 @@ ul li a:hover {
   height: 168px;
 }
 
+/* RFB:TODO convert to :hover?*/
 .exhibit-item:first-child {
   background-color: lightskyblue;
 }
@@ -523,7 +534,7 @@ ul li a:hover {
   flex-direction: column;
   justify-content: center;
   flex-grow: 1;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 @media only screen and (max-width: 470px) {
