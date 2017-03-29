@@ -3,16 +3,20 @@ html {
 }
 
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: "Open Sans", sans-serif;
+  color: midnightblue;
 }
 
+h2, h3 {
+  color: navy;
+}
 /* Header and Menu*/
 
 header {
   display: flex;
   height: 4rem;
   align-items: center;
-  background-color: white;
+  background-color: aliceblue;
   color: black;
 }
 
@@ -28,6 +32,16 @@ header {
   margin-right: 0.25rem;
 }
 
+.logo span {
+  font-size: 1.25rem;
+  color: navy;
+}
+
+.logo span strong {
+  font-weight: 700;
+  color: cadetblue;
+}
+
 .menu {
   display: flex;
   align-items: center;
@@ -39,7 +53,17 @@ header {
 
 ul li {
   display:inline;
-  padding: 0 1rem;
+  padding: 0 1rem 0 0;
+  color: cadetblue;
+}
+
+ul li a {
+  text-decoration: none;
+  color: cadetblue;
+}
+
+ul li a:hover {
+  color: darkblue;
 }
 
 .image-menu {
@@ -71,25 +95,27 @@ ul li {
   display: flex;
   align-items: center;
   justify-content:flex-start;
-  background-color: lightgray;
+  background-color: cornflowerblue;
 }
 
-/*.banner-image {
-  margin: 2rem 2.5rem 2rem 1.5rem;
-  width: 60%;
-}*/
+.banner-image {
+  margin: 2rem 1.5rem 2rem 1.5rem;
+  /*width: 60%;*/
+}
 
 .banner img {
-  margin: 2rem 2.5rem 2rem 1.5rem;
-  width: 60%;
-  max-width: 100%;
+  /*margin: 2rem 2.5rem 2rem 1.5rem;
+  width: 60%;*/
+  /*max-width: 100%;*/
+  width: 60vw;
 }
 
 .banner-text {
   display: inline-flex;
   flex-direction: column;
   justify-content: space-around;
-  color: darkslategray;
+  color: aliceblue;
+  margin-left: 1rem;
   margin-right: 1rem;
   height: 15rem;
   /* This is ugly but I can't size button based on the wrap text width */
@@ -105,34 +131,35 @@ ul li {
 
 .banner-text p {
   font-size: 1.5rem;
-  font-weight:bold;
+  font-weight:600;
   display: inline-block;
   width: auto;
 }
 
 .banner-text .button {
   /*width: 100%;*/
-  background-color: darkslategray;
-  color: white;
+  background-color: darkslateblue;
+  color: aliceblue;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   text-align: center;
+  border-radius: 0.25rem;
+  font-weight: 500;
 }
 
 @media only screen and (max-width: 470px) {
   .banner {
     flex-direction: column;
-    background-color: darkgray;
-
+    background-color: navy;
   }
 
-  .banner img {
+  .banner-image {
     display: none;
   }
 
   .banner-text-container {
     margin: 11.25rem 0 0 0;
-    background-color: lightgray;
+    background-color: cornflowerblue;
     width: 100%;
   }
 
@@ -140,7 +167,7 @@ ul li {
     height: auto;
     max-width: auto;
     padding: 2rem 1rem 2rem 1rem;
-    color: #404040;
+    color:aliceblue;
   }
 
   .banner-text h1 {
@@ -149,11 +176,11 @@ ul li {
 
   .banner-text p {
     margin-bottom: 1.5rem;
-    color: #808080;
   }
 
   .banner-text .button {
-    background-color: #808080;
+    font-weight: 600;
+    /*background-color: #808080;*/
   }
 }
 
@@ -161,41 +188,55 @@ ul li {
 
 .info-items {
   display:flex;
-  justify-content: space-between;
-  padding-bottom: 2rem;
+  /*padding-bottom: 2rem;*/
+  background-color: aliceblue;
 }
 
 .main-info-item {
   display: flex;
   flex-direction: column;
-  width: 60%;
-  margin: 2rem 1.5rem 0 1.5rem;
+  /*width: 60%;*/
+  padding: 2rem 1.5rem 1rem 1.5rem;
 }
 
 .main-info-item img {
-  max-width: 100%;
+  /*max-width: 100%;*/
+  width: 60vw;
+}
+
+.main-info-item-desc {
+  width: 60vw;
 }
 
 .main-info-item h2 {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  padding: 0 1.5rem;
   font-size: 2rem;
   font-weight: bold;
 }
 
 .main-info-item p {
-  padding: 0 1.5rem;
+  font-size: 0.8rem;
+}
+
+.signature {
+  font-weight: 600;
 }
 
 .other-info-items {
   display: flex;
   flex-direction: column;
   padding-top: 1rem;
+  border-left: 1px solid lightgray;
+  flex-grow: 100;
 }
 
-.info-item:last-child {
-  background-color: lightgray;
+.info-item-container:last-child {
+  background-color: lightskyblue;
+}
+
+.info-item-container {
+  border-bottom: 1px solid lightgray;
 }
 
 .info-item {
@@ -203,7 +244,6 @@ ul li {
   flex-direction: row;
   justify-content:flex-start;
   width: 423px;
-  border: 1px solid lightgray;
 }
 
 .std-image {
@@ -226,13 +266,19 @@ ul li {
 }
 
 .info-item-desc h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 0.5rem ;
 }
 
 .info-item-desc .info-item-desc-text {
+  font-size: 0.9rem;
   margin-bottom: 0.5rem;
+}
+
+.info-item-desc a {
+  font-size: 0.9rem;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 470px) {
@@ -283,7 +329,7 @@ ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color:lightgray;
+  background-color:cornflowerblue;
 }
 
 .section-head h2 {
@@ -291,12 +337,15 @@ ul li {
   font-weight: bold;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  color: aliceblue;
 }
 
 .program-grid {
   display:flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
 .program-row {
@@ -340,10 +389,6 @@ ul li {
 }
 
 @media only screen and (max-width: 470px) {
-  .programs {
-    background-color: whitesmoke ;
-  }
-
   .program-grid {
     margin-bottom: 2rem;
     width: 100%;
@@ -354,7 +399,7 @@ ul li {
   .program-row {
     flex-direction: column;
     justify-content: flex-start;
-    background-color: whitesmoke;
+    background-color: cornflowerblue;
     margin-bottom: 0;
     width: 100%;
   }
@@ -391,7 +436,8 @@ ul li {
   .program h3 {
     margin-top: 0;
     margin-left: 0;
-    background-color:lightgray;
+    color: aliceblue;
+    background-color:darkslateblue;
     padding-top: 1rem ;
     padding-left: 1rem ;
     padding-bottom: 1rem ;
@@ -408,6 +454,11 @@ ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: aliceblue;
+}
+
+.exhibits h2 {
+  color: navy;
 }
 
 .exhibits-all {
@@ -433,6 +484,10 @@ ul li {
   padding-top: 2rem;
 }
 
+.exhibit-main p {
+  font-size: 0.8rem;
+}
+
 .exhibit-others {
   display: flex;
   flex-direction: column;
@@ -447,7 +502,7 @@ ul li {
 }
 
 .exhibit-item:first-child {
-  background-color: lightgray;
+  background-color: lightskyblue;
 }
 
 .exhibit-item img {
@@ -466,8 +521,9 @@ ul li {
 .exhibit-desc {
   display: flex;
   flex-direction: column;
-  justify-content:space-around;
+  justify-content: center;
   flex-grow: 1;
+  font-size: 0.8rem;
 }
 
 @media only screen and (max-width: 470px) {
@@ -495,6 +551,8 @@ footer {
   border-top: 1px solid lightgray;
   padding-top: 1rem;
   padding-bottom: 2rem;
+  font-size: 0.75rem;
+  color: cadetblue;
 }
 
 footer .left {
@@ -504,7 +562,6 @@ footer .left {
 
 footer .right {
   text-align: right;
-  margin-right: 1.5rem;
 }
 
 @media only screen and (max-width: 470px) {
