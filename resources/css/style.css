@@ -298,32 +298,40 @@ ul li a:hover {
   .other-info-items {
     padding-top: 0;
     padding-bottom: 1rem;
+    flex-grow: initial;
+    border-left: none;
   }
 
   .info-item {
     flex-direction: column;
     border: none ;
+    width:auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .info-item-desc {
-    margin-left: 2rem;
+    margin-left: 1rem;
     padding-bottom: 1rem;
-  }
+    flex-grow: initial;
+}
 
   .mobile-image {
     display: block;
-    padding: 1rem 1rem;
-    width: 100%;
+    /*padding: 1rem 1rem;*/
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 89vw;
     height: auto;
-    max-width: 460px;
+    /*max-width: 460px;*/
     }
 
   .std-image {
     display:none;
   }
 
-  .info-item:last-child {
-    background-color: white;
+  .info-item-container:last-child {
+    background-color: lightskyblue;
   }
 
 }
