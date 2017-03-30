@@ -55,18 +55,18 @@ header {
   margin-right: 1rem;
 }
 
-ul li {
+.menu-item {
   display:inline;
   padding: 0 1rem 0 0;
   color: cadetblue;
 }
 
-ul li a {
+.menu-item-link {
   text-decoration: none;
   color: cadetblue;
 }
 
-ul li a:hover {
+.menu-item-link:hover {
   color: darkblue;
 }
 
@@ -103,7 +103,7 @@ ul li a:hover {
 }
 
 .banner-image {
-  margin: 2rem 1.5rem 2rem 1.5rem;
+  padding: 2rem 1.5rem 2rem 1.5rem;
   /*width: 60%;*/
 }
 
@@ -140,15 +140,23 @@ ul li a:hover {
   width: auto;
 }
 
-.banner-text .button {
+.banner-button {
   /*width: 100%;*/
   background-color: darkslateblue;
-  color: aliceblue;
+  text-align: center;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  text-align: center;
   border-radius: 0.25rem;
-  font-weight: 500;
+}
+
+.banner-button:hover {
+  cursor: pointer;
+}
+
+.banner-button-link {
+  font-weight: 600;
+  color: aliceblue;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 470px) {
@@ -336,7 +344,7 @@ ul li a:hover {
 
 }
 
-/* PRograms / Courses Section*/
+/* Programs / Courses Section*/
 
 .programs {
   display: flex;
