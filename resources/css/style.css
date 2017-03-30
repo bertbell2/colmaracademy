@@ -364,7 +364,7 @@ ul li a:hover {
 .program-row {
   display: flex ;
   justify-content:center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .program-row .program:nth-child(2n+0) {
@@ -386,21 +386,25 @@ ul li a:hover {
   height: 9.25rem;
 }
 
+.program-desc {
+  padding-left: 1rem;
+}
+
 .program h3 {
   font-weight: bold;
   font-size: 1.5rem;
   margin-top: 1rem;
-  margin-left: 1rem;
+  /*margin-left: 1rem;*/
 }
 
 .program h4 {
   margin: 0.5rem auto;
-  margin-left: 1rem;
-  line-height: 1.5rem;
+  /*margin-left: 1rem;*/
+  line-height: 1.5;
 }
 
 .program p {
-  margin-left: 1rem;
+  /*margin-left: 1rem;*/
   margin-right: 0.5rem;
   line-height: 1.5;
 }
