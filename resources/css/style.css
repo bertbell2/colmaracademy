@@ -121,7 +121,7 @@ header {
   color: aliceblue;
   margin-left: 1rem;
   margin-right: 1rem;
-  height: 15rem;
+  height: 18rem;
   /* This is ugly but I can't size button based on the wrap text width */
   max-width: 21rem;
 }
@@ -147,6 +147,7 @@ header {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border-radius: 0.25rem;
+  width: auto;
 }
 
 .banner-button:hover {
@@ -166,18 +167,29 @@ header {
   }
 
   .banner-image {
-    display: none;
+    height: 11.25rem;
+    width: 100%;
+    padding: 0 0 0 0;
+  }
+
+  .banner-image img {
+    width:auto;
+    max-width: 100%
   }
 
   .banner-text-container {
-    margin: 11.25rem 0 0 0;
+    /*margin: 11.25rem 0 0 0;*/
     background-color: cornflowerblue;
     width: 100%;
+    max-width: 100%;
   }
 
   .banner-text {
     height: auto;
-    max-width: auto;
+    width: auto;
+    max-width:none;
+    margin-left: 0;
+    margin-right: 0;
     padding: 2rem 1rem 2rem 1rem;
     color:aliceblue;
   }
@@ -190,10 +202,6 @@ header {
     margin-bottom: 1.5rem;
   }
 
-  .banner-text .button {
-    font-weight: 600;
-    /*background-color: #808080;*/
-  }
 }
 
 /* Information Section */
@@ -256,15 +264,14 @@ header {
   display: flex;
   flex-direction: row;
   justify-content:flex-start;
-  width: 423px;
+  max-width: 423px;
 }
 
 .std-image {
   display: block;
   padding: 1rem;
-  width: 35%;
-  height: auto;
-  max-height: 148px;
+  width: 148px;
+  height: 148px;
 }
 
 .mobile-image {
@@ -363,13 +370,16 @@ header {
 
 .program-grid {
   display:flex;
-  flex-direction: column;
-  margin-bottom: 1.5rem;
-  margin-left: 4rem;
-  margin-right: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  /*flex-direction: column;*/
+  /*margin-bottom: 1.5rem;*/
+  margin-bottom: 2rem;
+  /*margin-left: 4rem;*/
+  /*margin-right: 4rem;*/
 }
 
-.program-row {
+/*.program-row {
   display: flex ;
   justify-content:center;
   margin-bottom: 1rem;
@@ -378,15 +388,16 @@ header {
 .program-row .program:nth-child(2n+0) {
   margin-left: 2rem;
   margin-right: 2rem;
-}
+}*/
 
 .program {
   display: flex;
   flex-direction: column;
-  height: 19rem;
+  /*height: 19rem;*/
   border: 1px solid black;
+  margin: 1rem;
   /*flex-grow: 1;*/
-  flex-basis: 30%;
+  flex-basis: 25%;
   background-color: white;
 }
 
@@ -415,43 +426,56 @@ header {
   /*margin-left: 1rem;*/
   margin-right: 0.5rem;
   line-height: 1.5;
+  padding-bottom: 1rem;
 }
 
 @media only screen and (max-width: 470px) {
   .program-grid {
+    /*padding-left: 1rem;
+    padding-right: 1rem;*/
     margin-bottom: 2rem;
     width: 100%;
-    max-width: 460px;
+    /*max-width: 460px;*/
     align-items: center;
+    background-color: cornflowerblue;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
-  .program-row {
+  /*.program-row {
     flex-direction: column;
     justify-content: flex-start;
     background-color: cornflowerblue;
     margin-bottom: 0;
     width: 100%;
-  }
+  }*/
 
-  .program-row .program:nth-child(2n+0) {
+  /*.program-row .program:nth-child(2n+0) {
     margin-left: 1rem;
     margin-right: 1rem;
-  }
+  }*/
 
   .program {
     display: block;
-    height: auto ;
+    /*height: auto ;*/
     border: none;
-    width: auto;
+    /*width: auto;*/
     background-color: inherit;
     flex-basis: auto;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    /*margin-left: 1rem;
+    margin-right: 1rem;*/
+    width: 100%;
+    margin-top: 0;
     margin-bottom: 0.5rem;
 }
 
   .program img {
     display:none ;
+  }
+
+  .program-desc {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .program h4 {
@@ -463,16 +487,17 @@ header {
   }
 
   .program h3 {
+    text-align: center;
     margin-top: 0;
     margin-left: 0;
     color: aliceblue;
     background-color:darkslateblue;
     padding-top: 1rem ;
-    padding-left: 1rem ;
+    padding-left: auto ;
     padding-bottom: 1rem ;
     padding-right: auto;
-    width: auto;
-    max-width: 460px;
+    width: 100%;
+    /*max-width: 460px;*/
   }
 
 }
