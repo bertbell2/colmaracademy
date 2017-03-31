@@ -1,14 +1,27 @@
+:root {
+  --dark-bg-color: cornflowerblue;
+  --lite-bg-color: aliceblue;
+  --dark-txt-color: midnightblue;
+  --lite-txt-color: aliceblue;
+  --logo-txt-color: #0E6BA8;
+  --dark-hd-color: midnightblue;
+  --dark-btn-color: midnightblue;
+  --hilite-sel-color: #A7CCED;
+  --lite-border-color: cornflowerblue;
+  --dark-border-color: midnightblue;
+}
+
 html {
   font-size: 16px;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
-  color: midnightblue;
+  color: var(--dark-txt-color);
 }
 
 h2, h3 {
-  color: navy;
+  color: var(--dark-hd-color);
 }
 
 p {
@@ -20,8 +33,8 @@ header {
   display: flex;
   height: 4rem;
   align-items: center;
-  background-color: aliceblue;
-  color: black;
+  background-color: var(--lite-bg-color);
+  /*color: black;*/
 }
 
 .logo {
@@ -38,12 +51,12 @@ header {
 
 .logo span {
   font-size: 1.25rem;
-  color: navy;
+  color: var(--dark-hd-color);
 }
 
 .logo span strong {
   font-weight: 700;
-  color: cadetblue;
+  color: var(--logo-txt-color);
 }
 
 .menu {
@@ -58,16 +71,16 @@ header {
 .menu-item {
   display:inline;
   padding: 0 1rem 0 0;
-  color: cadetblue;
+  color: var(--logo-txt-color);
 }
 
 .menu-item-link {
   text-decoration: none;
-  color: cadetblue;
+  color: var(--logo-txt-color);
 }
 
 .menu-item-link:hover {
-  color: darkblue;
+  color: var(--dark-txt-color);
 }
 
 .image-menu {
@@ -99,7 +112,7 @@ header {
   display: flex;
   align-items: center;
   justify-content:flex-start;
-  background-color: cornflowerblue;
+  background-color: var(--dark-bg-color);
 }
 
 .banner-image {
@@ -118,7 +131,7 @@ header {
   display: inline-flex;
   flex-direction: column;
   justify-content: space-around;
-  color: aliceblue;
+  color: var(--lite-txt-color);
   margin-left: 1rem;
   margin-right: 1rem;
   height: 18rem;
@@ -142,7 +155,7 @@ header {
 
 .banner-button {
   /*width: 100%;*/
-  background-color: darkslateblue;
+  background-color: var(--dark-btn-color);
   text-align: center;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -156,14 +169,14 @@ header {
 
 .banner-button-link {
   font-weight: 600;
-  color: aliceblue;
+  color: var(--lite-bg-color);
   text-decoration: none;
 }
 
 @media only screen and (max-width: 470px) {
   .banner {
     flex-direction: column;
-    background-color: navy;
+    background-color: var(--dark-hd-color);
   }
 
   .banner-image {
@@ -179,7 +192,7 @@ header {
 
   .banner-text-container {
     /*margin: 11.25rem 0 0 0;*/
-    background-color: cornflowerblue;
+    background-color: var(--dark-bg-color);
     width: 100%;
     max-width: 100%;
   }
@@ -191,7 +204,7 @@ header {
     margin-left: 0;
     margin-right: 0;
     padding: 2rem 1rem 2rem 1rem;
-    color:aliceblue;
+    color:var(--lite-bg-color);
   }
 
   .banner-text h1 {
@@ -209,7 +222,7 @@ header {
 .info-items {
   display:flex;
   /*padding-bottom: 2rem;*/
-  background-color: aliceblue;
+  background-color: var(--lite-bg-color);
 }
 
 .main-info-item {
@@ -247,17 +260,17 @@ header {
   display: flex;
   flex-direction: column;
   padding-top: 1rem;
-  border-left: 1px solid lightgray;
+  border-left: 1px solid var(--lite-border-color);
   flex-grow: 100;
 }
 
 /* RFB:TODO convert to :hover?*/
 .info-item-container:last-child {
-  background-color: lightskyblue;
+  background-color: var(--hilite-sel-color);
 }
 
 .info-item-container {
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid var(--lite-border-color);
 }
 
 .info-item {
@@ -346,7 +359,7 @@ header {
   }
 
   .info-item-container:last-child {
-    background-color: lightskyblue;
+    background-color: var(--hilite-sel-color);
   }
 
 }
@@ -357,7 +370,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color:cornflowerblue;
+  background-color:var(--dark-bg-color);
 }
 
 .section-head h2 {
@@ -365,7 +378,7 @@ header {
   font-weight: bold;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  color: aliceblue;
+  color: var(--lite-bg-color);
 }
 
 .program-grid {
@@ -394,7 +407,7 @@ header {
   display: flex;
   flex-direction: column;
   /*height: 19rem;*/
-  border: 1px solid black;
+  border: 1px solid var(--dark-border-color);
   margin: 1rem;
   /*flex-grow: 1;*/
   flex-basis: 25%;
@@ -437,7 +450,7 @@ header {
     width: 100%;
     /*max-width: 460px;*/
     align-items: center;
-    background-color: cornflowerblue;
+    background-color: var(--dark-bg-color);
     flex-direction: column;
     justify-content: flex-start;
   }
@@ -445,7 +458,7 @@ header {
   /*.program-row {
     flex-direction: column;
     justify-content: flex-start;
-    background-color: cornflowerblue;
+    background-color: var(--dark-bg-color);
     margin-bottom: 0;
     width: 100%;
   }*/
@@ -490,8 +503,8 @@ header {
     text-align: center;
     margin-top: 0;
     margin-left: 0;
-    color: aliceblue;
-    background-color:darkslateblue;
+    color: var(--lite-bg-color);
+    background-color:var(--dark-btn-color);
     padding-top: 1rem ;
     padding-left: auto ;
     padding-bottom: 1rem ;
@@ -508,11 +521,11 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: aliceblue;
+  background-color: var(--lite-bg-color);
 }
 
 .exhibits h2 {
-  color: navy;
+  color: var(--dark-hd-color);
 }
 
 .exhibits-all {
@@ -558,7 +571,7 @@ header {
 
 /* RFB:TODO convert to :hover?*/
 .exhibit-item:first-child {
-  background-color: lightskyblue;
+  background-color: var(--hilite-sel-color);
 }
 
 .exhibit-item img {
@@ -604,11 +617,12 @@ header {
 
 footer {
   display: flex;
-  border-top: 1px solid lightgray;
+  border-top: 1px solid var(--lite-border-color);
   padding-top: 1rem;
   padding-bottom: 2rem;
-  font-size: 0.75rem;
-  color: cadetblue;
+  font-size: 0.9rem;
+  color: var(--logo-txt-color);
+  background-color: var(--lite-bg-color);
 }
 
 footer .left {
