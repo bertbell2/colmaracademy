@@ -321,8 +321,7 @@ header {
   flex-grow: 100;
 }
 
-/* RFB:TODO convert to :hover?*/
-.info-item-container:last-child {
+.info-item-container:hover {
   background-color: var(--hilite-sel-color);
 }
 
@@ -606,8 +605,7 @@ header {
   height: 168px;
 }
 
-/* RFB:TODO convert to :hover?*/
-.exhibit-item:first-child {
+.exhibit-item:hover {
   background-color: var(--hilite-sel-color);
 }
 
