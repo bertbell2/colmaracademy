@@ -1,6 +1,6 @@
 // From  xr280xr on stackoverflow
 // http://stackoverflow.com/questions/14596213/shrink-div-to-text-thats-wrapped-to-its-max-width
-$.fn.fixWidth = function() {
+$.fn.fixWidth = function( isBold ) {
   $(this).each(function() {
     var el = $(this);
     var getLength = function(txt) {
@@ -45,27 +45,41 @@ $.fn.fixWidth = function() {
         maxLineLengthSoFar = acceptedLineLength;
     }
 
-    if (maxLineLengthSoFar != 0)
-      el.css({
-        width: (maxLineLengthSoFar + 2) + "px"
-      });
+    if (maxLineLengthSoFar != 0) {
+      if (isBold ) {
+        el.data('maxLineLength', maxLineLengthSoFar + 3) ;
+      } else {
+        el.data('maxLineLength', maxLineLengthSoFar + 1) ;
+      }
+    }
   });
 };
 
-$(document).ready(function(){
+var fixButtonWidth = function() {
   // get a couple of widths
   var $bannerHeader = $('.banner-text h1') ;
   var $bannerPara = $('.banner-text p') ;
-  $bannerHeader.fixWidth();
-  $bannerPara.fixWidth();
-  var wide1 = $bannerHeader.width() ;
+  $bannerHeader.fixWidth(true);
+  $bannerPara.fixWidth(true);
+  var wide1 = $bannerHeader.data('maxLineLength') ;
   console.log("Banner header is: " + wide1 + "pixels wide.");
-  var wide2 = $bannerPara.width() ;
+  var wide2 = $bannerPara.data('maxLineLength') ;
   console.log("Banner paragraph is: " + wide2 + "pixels wide.");
   if (wide1 > wide2) {
-    $('.banner-button').css({width: wide1 + "px"}) ;
+    $('.banner-button-container').css({width: wide1 + "px"}) ;
   } else {
-    $('.banner-button').css({width: wide2 + "px"}) ;
+    $('.banner-button-container').css({width: wide2 + "px"}) ;
   }
+};
 
+$(document).ready(function(){
+  fixButtonWidth() ;
+  $(window).resize( function() {
+    console.log('In Resize handler');
+    if ( $(window).width() > 785 ) {
+      fixButtonWidth() ;
+    } else {
+      $('.banner-button-container').css({width: '80vw'}) ;
+    }
+  })
 });
